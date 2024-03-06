@@ -380,12 +380,7 @@ def launch_setup(context, *args, **kwargs):
                 package="rclcpp_components",
                 executable=LaunchConfiguration("container_executable"),
                 composable_node_descriptions=[
-                    control_validator_component,
-                    ComposableNode(
-                        package="glog_component",
-                        plugin="GlogComponent",
-                        name="glog_validator_component",
-                    ),
+                    control_validator_component
                 ],
             ),
         ]
